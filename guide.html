@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Гід зі смаків, походження зерна, способів заварювання та відповідями на часті питання про каву.">
+    <title>Гід по каві та часті питання — Смажена кава</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/store.js" defer></script>
+  </head>
+  <body>
+    <div class="page guide-page">
+      <header class="site-header">
+        <div class="container header-content">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+            <span class="logo-text">Смажена кава</span>
+          </a>
+
+          <nav id="main-navigation" class="header-navigation" aria-label="Головна навігація">
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор</a>
+            <a href="about.html">Про нас</a>
+            <a href="guide.html" class="is-active" aria-current="page">Гід по каві</a>
+            <a href="contacts.html">Контакти</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-icon" href="cart.html" aria-label="Кошик">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Меню" aria-controls="main-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="button button-primary" href="builder.html">Створити свій мікс <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="content-section guide-intro" aria-labelledby="guide-title">
+          <div class="container guide-intro-content">
+            <p class="eyebrow">ПРОСТО ПРО КАВУ</p>
+            <h1 id="guide-title">Гід по каві та часті питання</h1>
+            <p>Перший крок у кавовий світ чи пошук нового смакового досвіду? Розберіться у смакових напрямах, походженні зерна та способах заварювання — і оберіть каву, яка пасуватиме саме вам.</p>
+          </div>
+        </section>
+
+        <section class="content-section guide-tastes-section" aria-labelledby="tastes-title">
+          <div class="container">
+            <div class="section-heading guide-section-heading">
+              <p class="eyebrow">ЗНАЙДІТЬ СВІЙ СМАК</p>
+              <h2 id="tastes-title">Довідник смаків</h2>
+            </div>
+            <div class="card-grid guide-taste-grid">
+              <article class="card guide-card">
+                <p class="guide-card-kicker">01 · ЗНАЙОМИЙ І ЗАТИШНИЙ</p>
+                <h3>Шоколадно-горіховий</h3>
+                <p>Ноти какао, горіхів і темного шоколаду.</p>
+                <dl class="guide-taste-stats">
+                  <div><dt>Кислотність</dt><dd>Низька</dd></div>
+                  <div><dt>Солодкість</dt><dd>Середня–висока</dd></div>
+                </dl>
+                <p class="guide-recommendation">Підійде для класичного еспресо, напоїв із молоком і тих, хто тільки знайомиться зі свіжою кавою.</p>
+              </article>
+              <article class="card guide-card">
+                <p class="guide-card-kicker">02 · СОКОВИТИЙ І ЯСКРАВИЙ</p>
+                <h3>Ягідно-фруктовий</h3>
+                <p>Смак стиглих ягід, кісточкових фруктів та легкої винної ноти.</p>
+                <dl class="guide-taste-stats">
+                  <div><dt>Кислотність</dt><dd>Середня–висока</dd></div>
+                  <div><dt>Солодкість</dt><dd>Середня–висока</dd></div>
+                </dl>
+                <p class="guide-recommendation">Спробуйте у фільтрі, якщо любите соковиті й виразні чашки.</p>
+              </article>
+              <article class="card guide-card">
+                <p class="guide-card-kicker">03 · ЛЕГКИЙ І КВІТКОВИЙ</p>
+                <h3>Цитрусово-квітковий</h3>
+                <p>Відтінки цитрусової цедри, жасмину та чаю.</p>
+                <dl class="guide-taste-stats">
+                  <div><dt>Кислотність</dt><dd>Висока</dd></div>
+                  <div><dt>Солодкість</dt><dd>Середня</dd></div>
+                </dl>
+                <p class="guide-recommendation">Підійде поціновувачам легкого фільтру та чистого розкриття смаку зерна.</p>
+              </article>
+              <article class="card guide-card">
+                <p class="guide-card-kicker">04 · М'ЯКИЙ І ПРЯНИЙ</p>
+                <h3>Карамельно-пряний</h3>
+                <p>Ноти карамелі, спецій, випічки та солодкого посмаку.</p>
+                <dl class="guide-taste-stats">
+                  <div><dt>Кислотність</dt><dd>Низька–середня</dd></div>
+                  <div><dt>Солодкість</dt><dd>Висока</dd></div>
+                </dl>
+                <p class="guide-recommendation">Добре смакуватиме в еспресо, турці або з молоком.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section guide-origins-section" aria-labelledby="origins-title">
+          <div class="container">
+            <div class="section-heading guide-section-heading">
+              <p class="eyebrow">ЗВІДКИ ЗЕРНО</p>
+              <h2 id="origins-title">Походження та обробка зерна</h2>
+            </div>
+
+            <div class="guide-subsection">
+              <h3>Регіони вирощування</h3>
+              <div class="guide-origin-grid">
+                <article class="card guide-card">
+                  <p class="guide-card-kicker">РЕГІОН</p>
+                  <h3>Латинська Америка</h3>
+                  <p>У чашці часто зустрічаються шоколадні, горіхові й карамельні ноти. Такі профілі можуть бути зрозумілим вибором для еспресо та напоїв із молоком.</p>
+                </article>
+                <article class="card guide-card">
+                  <p class="guide-card-kicker">РЕГІОН</p>
+                  <h3>Африка</h3>
+                  <p>Зерно з цього регіону часто має ягідні, цитрусові або квіткові відтінки. Спробуйте його у фільтрі, щоб краще відчути нюанси смаку.</p>
+                </article>
+              </div>
+              <p class="guide-note">Смак залежить не лише від регіону, а й від сорту, висоти вирощування, обробки та профілю обсмаження.</p>
+            </div>
+
+            <div class="guide-subsection processing-subsection">
+              <h3>Способи обробки</h3>
+              <div class="guide-processing-grid">
+                <article class="card guide-card">
+                  <h3>Мита / Washed</h3>
+                  <p>Після видалення м'якоті зерно ферментують і промивають. У чашці цей спосіб часто підкреслює чистоту, прозорість і кислотність.</p>
+                </article>
+                <article class="card guide-card">
+                  <h3>Натуральна / Natural</h3>
+                  <p>Кавові ягоди сушать цілими, а зерно відділяють після сушіння. Профіль часто виходить фруктовим, солодким і насиченим.</p>
+                </article>
+                <article class="card guide-card">
+                  <h3>Хані / Honey</h3>
+                  <p>Частину м'якоті залишають на зерні під час сушіння. У смаку можуть поєднуватися солодкість і виразні фруктові відтінки.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section guide-brewing-section" aria-labelledby="brewing-guide-title">
+          <div class="container">
+            <div class="section-heading guide-section-heading">
+              <p class="eyebrow">ЗАВАРЮЙТЕ СМАЧНО</p>
+              <h2 id="brewing-guide-title">Поради щодо заварювання та вибору помелу</h2>
+            </div>
+            <div class="guide-brew-grid">
+              <article class="card guide-card guide-brew-card">
+                <h3>Еспресо</h3>
+                <dl>
+                  <div><dt>Помел</dt><dd>Дрібний</dd></div>
+                  <div><dt>Обсмаження</dt><dd>Середнє або темне</dd></div>
+                  <div><dt>Пропорція</dt><dd>1:2</dd></div>
+                </dl>
+              </article>
+              <article class="card guide-card guide-brew-card">
+                <h3>Фільтр V60</h3>
+                <dl>
+                  <div><dt>Помел</dt><dd>Середньо-дрібний</dd></div>
+                  <div><dt>Обсмаження</dt><dd>Світле або середнє</dd></div>
+                  <div><dt>Пропорція</dt><dd>1:15–1:17</dd></div>
+                </dl>
+              </article>
+              <article class="card guide-card guide-brew-card">
+                <h3>Френч-прес</h3>
+                <dl>
+                  <div><dt>Помел</dt><dd>Грубий</dd></div>
+                  <div><dt>Обсмаження</dt><dd>Середнє</dd></div>
+                  <div><dt>Пропорція</dt><dd>1:15</dd></div>
+                </dl>
+              </article>
+              <article class="card guide-card guide-brew-card">
+                <h3>Турка</h3>
+                <dl>
+                  <div><dt>Помел</dt><dd>Дуже дрібний</dd></div>
+                  <div><dt>Обсмаження</dt><dd>Середнє або темне</dd></div>
+                  <div><dt>Пропорція</dt><dd>1:10</dd></div>
+                </dl>
+              </article>
+              <article class="card guide-card guide-brew-card">
+                <h3>Дріп-пакет</h3>
+                <dl>
+                  <div><dt>Помел</dt><dd>Середній, уже мелена кава</dd></div>
+                  <div><dt>Обсмаження</dt><dd>Світле або середнє</dd></div>
+                  <div><dt>Пропорція</dt><dd>10–12 г / 160–180 мл</dd></div>
+                </dl>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section guide-faq-section" aria-labelledby="faq-title">
+          <div class="container guide-faq-container">
+            <div class="section-heading guide-section-heading">
+              <p class="eyebrow">КОРОТКО ПРО ГОЛОВНЕ</p>
+              <h2 id="faq-title">Відповіді на часті питання (FAQ)</h2>
+            </div>
+            <div class="guide-faq-list">
+              <details class="guide-faq-item">
+                <summary>Коли обсмажується кава після замовлення?</summary>
+                <p>Працюємо за моделлю Roast-to-Order: обсмажуємо каву після отримання замовлення та відправляємо її свіжою.</p>
+              </details>
+              <details class="guide-faq-item">
+                <summary>Коли кава найкраще розкриває смак після обсмаження?</summary>
+                <p>Після обсмаження зерну потрібен час на дегазацію. Для еспресо часто радять дати каві кілька днів відпочити; точний момент залежить від зерна й способу заварювання.</p>
+              </details>
+              <details class="guide-faq-item">
+                <summary>Як правильно зберігати каву?</summary>
+                <p>Тримайте каву в щільно закритому пакеті з клапаном, у сухому прохолодному місці, подалі від сонця, тепла та сильних запахів.</p>
+              </details>
+              <details class="guide-faq-item">
+                <summary>Як обрати каву, якщо я тільки починаю знайомство зі specialty?</summary>
+                <p>Спробуйте шоколадно-горіховий або карамельний профіль для м'якого старту. Для яскравішої чашки оберіть ягідний чи цитрусово-квітковий напрям.</p>
+              </details>
+              <details class="guide-faq-item">
+                <summary>Як працює Конструктор міксу?</summary>
+                <p>Оберіть два сорти, задайте їхні пропорції так, щоб разом вони становили 100%, а потім налаштуйте обсмаження, помел і пакування. <a href="builder.html">Спробувати Конструктор</a>.</p>
+              </details>
+              <details class="guide-faq-item">
+                <summary>Які є способи доставки?</summary>
+                <p>Можна обрати доставку Новою поштою у відділення або поштомат, кур'єра чи самовивіз із ростерії у Львові. Замовлення відправляємо в день обсмаження.</p>
+              </details>
+            </div>
+            <div class="guide-catalog-cta">
+              <p>Знайшли смаковий напрям для себе? Перегляньте свіжообсмажену каву в каталозі.</p>
+              <a class="button guide-catalog-link" href="catalog.html">Перейти до каталогу <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">
+              <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+              <span class="logo-text">Смажена кава</span>
+            </a>
+            <p>Світлий інтернет-магазин кави з обсмаженням під замовлення та конструктором власного міксу.</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Навігація в підвалі">
+            <h2>Навігація</h2>
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор міксу</a>
+            <a href="cart.html">Кошик і оформлення замовлення</a>
+            <a href="about.html">Про нас і процес обсмаження</a>
+            <a href="guide.html">Підбір кави та FAQ</a>
+            <a href="contacts.html">Контакти й інформація покупцям</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Корисна інформація">
+            <h2>Покупцям</h2>
+            <a href="contacts.html">Доставка та оплата</a>
+            <a href="contacts.html">Повернення й обмін</a>
+            <a href="contacts.html">Політика конфіденційності</a>
+            <a href="contacts.html">Умови користування</a>
+          </nav>
+
+          <div class="footer-column" id="contacts">
+            <h2>Контакти</h2>
+            <address>
+              <a href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a>
+              <a href="tel:+380000000000">+380 00 000 00 00</a>
+            </address>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© Смажена кава. Усі права захищені.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

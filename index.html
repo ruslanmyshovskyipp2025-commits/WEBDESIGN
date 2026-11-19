@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Створіть кавовий мікс під власний смак. Оберіть зерно, пропорції та обсмаження — ми обсмажимо каву під замовлення.">
+    <title>Створіть кавовий мікс під власний смак — Смажена кава</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/store.js" defer></script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#F5EFE6] text-[#2B211C]">
+    <header class="site-header border-b border-[#DED3C7] bg-[#FFFDF9] text-[#2B211C]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" aria-current="page" class="logo is-active flex min-h-[44px] items-center gap-2 rounded-md text-[#2B211C] hover:text-[#C86445]">
+          <img src="assets/icons/logo1.svg" width="64" height="64" alt="">
+          <span class="font-semibold">Смажена кава</span>
+        </a>
+
+        <nav id="main-navigation" aria-label="Головна навігація" class="hidden items-center gap-6 md:flex">
+          <a class="rounded-sm hover:text-[#C86445]" href="catalog.html">Каталог</a>
+          <a class="rounded-sm hover:text-[#C86445]" href="builder.html">Конструктор</a>
+          <a class="rounded-sm hover:text-[#C86445]" href="about.html">Про нас</a>
+          <a class="rounded-sm hover:text-[#C86445]" href="guide.html">Гід по каві</a>
+          <a class="rounded-sm hover:text-[#C86445]" href="contacts.html">Контакти</a>
+        </nav>
+
+        <div class="flex items-center justify-end gap-3">
+          <a href="cart.html" aria-label="Кошик" class="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg hover:bg-[#F5EFE6]">
+            <i class="fas fa-shopping-cart text-lg" aria-hidden="true"></i>
+          </a>
+          <a href="builder.html" class="button button-primary hidden items-center justify-center md:flex">
+            Створити свій мікс
+          </a>
+          <details class="group relative md:hidden">
+            <summary aria-label="Мобільне меню" class="flex min-h-[44px] min-w-[44px] cursor-pointer list-none items-center justify-center rounded-lg hover:bg-[#F5EFE6]">
+              <i class="fas fa-bars text-lg" aria-hidden="true"></i>
+            </summary>
+            <div class="absolute right-0 top-full z-10 mt-3 hidden w-64 max-w-[calc(100vw-2rem)] rounded-xl border border-[#DED3C7] bg-[#FFFDF9] p-4 shadow-lg group-open:block">
+              <nav aria-label="Мобільна навігація" class="flex flex-col gap-1">
+                <a class="flex min-h-[44px] items-center rounded-lg px-3 py-2 hover:text-[#C86445]" href="catalog.html">Каталог</a>
+                <a class="flex min-h-[44px] items-center rounded-lg px-3 py-2 hover:text-[#C86445]" href="builder.html">Конструктор</a>
+                <a class="flex min-h-[44px] items-center rounded-lg px-3 py-2 hover:text-[#C86445]" href="about.html">Про нас</a>
+                <a class="flex min-h-[44px] items-center rounded-lg px-3 py-2 hover:text-[#C86445]" href="guide.html">Гід по каві</a>
+                <a class="flex min-h-[44px] items-center rounded-lg px-3 py-2 hover:text-[#C86445]" href="contacts.html">Контакти</a>
+                <a href="builder.html" class="button button-primary mt-2 flex w-full items-center justify-center md:w-auto">Створити свій мікс</a>
+              </nav>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">КАВА, ЯКУ ВИ ОБИРАЄТЕ СОБІ</p>
+            <h1 id="hero-title" class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Створіть кавовий мікс під власний смак</h1>
+            <p class="text-sm md:text-base lg:text-lg">Оберіть зерно, пропорції та обсмаження. Ми обсмажимо ваш мікс під замовлення — для звичної чашки або нового смакового досвіду.</p>
+            <a class="button button-primary min-h-[44px] w-full md:w-auto" href="builder.html">Створити свій мікс <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="button button-secondary min-h-[44px] w-full md:w-auto" href="catalog.html">Переглянути каталог</a>
+          </div>
+          <figure class="hero-media">
+            <img src="assets/images/hero_bg_2.jpg" alt="Працівник перебирає обсмажені кавові зерна.">
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section" id="benefits" aria-labelledby="benefits-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ПЕРЕВАГИ</p>
+            <h2 id="benefits-title">Кава за вашими правилами</h2>
+          </div>
+          <div class="card-grid benefits-grid">
+            <article class="card">
+              <img src="assets/icons/icon-roast.svg" alt="" width="48" height="48">
+              <h3>Свіже обсмаження під замовлення</h3>
+              <p>Обсмажуємо каву виключно після вашого замовлення</p>
+            </article>
+            <article class="card">
+              <img src="assets/icons/icon-bean.svg" alt="" width="48" height="48">
+              <h3>Персоналізація смаку</h3>
+              <p>Налаштуйте кожен параметр під свій спосіб заварювання</p>
+            </article>
+            <article class="card">
+              <img src="assets/icons/icon-aroma.svg" alt="" width="48" height="48">
+              <h3>Прозоре походження</h3>
+              <p>Детальна інформація про країну, ферму та обробку</p>
+            </article>
+            <article class="card">
+              <img src="assets/icons/icon-grind.svg" alt="" width="48" height="48">
+              <h3>Ступінь помелу</h3>
+              <p>Оберіть помел для свого способу приготування кави</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-muted" id="builder" aria-labelledby="builder-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">КОНСТРУКТОР МІКСУ</p>
+            <h2 id="builder-title">Ваш мікс починається тут</h2>
+            <p>Налаштуйте склад і спосіб приготування. Нижче — демонстраційний стан конструктора.</p>
+          </div>
+
+          <div class="builder-layout">
+            <form class="builder-form" id="homepage-blend-form" action="#" method="get">
+              <div class="form-field">
+                <label for="coffee-beans">Зерно А</label>
+                <select id="coffee-beans" name="beans">
+                  <option value="ethiopia">Ефіопія</option>
+                  <option value="brazil">Бразилія</option>
+                  <option value="colombia">Колумбія</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="coffee-beans-b">Зерно Б</label>
+                <select id="coffee-beans-b" name="beans-b">
+                  <option value="brazil">Бразилія</option>
+                  <option value="ethiopia">Ефіопія</option>
+                  <option value="colombia">Колумбія</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="coffee-ratio">Пропорції зерна А (60%)</label>
+                <input id="coffee-ratio" name="ratio" type="range" min="0" max="100" value="60">
+              </div>
+
+              <div class="form-field">
+                <label for="roast-level">Обсмаження</label>
+                <select id="roast-level" name="roast">
+                  <option value="medium">Середнє</option>
+                  <option value="light">Світле</option>
+                  <option value="dark">Темне</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="grind">Помел</label>
+                <select id="grind" name="grind">
+                  <option value="whole">У зернах</option>
+                  <option value="filter">Для фільтра</option>
+                  <option value="espresso">Для еспресо</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="packaging">Пакування</label>
+                <select id="packaging" name="packaging">
+                  <option value="250g">Пакет 250 г</option>
+                  <option value="500g">Пакет 500 г</option>
+                </select>
+              </div>
+            </form>
+
+            <aside class="builder-preview" aria-labelledby="builder-preview-title">
+              <h3 id="builder-preview-title">Попередній перегляд</h3>
+              <p id="home-blend-description">Ваш власний мікс: Ефіопія — 60%, Бразилія — 40%. Обсмаження: середнє. Помел: у зернах. Пакування: 250 г.</p>
+              <p class="price">Вартість: <strong id="home-blend-price">₴420</strong></p>
+              <p>Ціна перераховується при зміні складу та пакування.</p>
+              <button class="button button-primary min-h-[44px] w-full md:w-auto" id="home-add-blend" type="button">Додати до кошика <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-12" aria-labelledby="catalog-title">
+        <h2 id="catalog-title" class="mb-6 text-xl sm:text-2xl md:text-3xl font-bold text-[#2B211C]">Популярні товари</h2>
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:pb-0 lg:grid-cols-3">
+          <article data-product-id="balance" class="w-[82%] shrink-0 snap-start rounded-[18px] border border-[#DED3C7] bg-[#FFFDF9] p-4 font-[Manrope,sans-serif] text-[#2B211C] shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg sm:w-auto md:p-6">
+            <img src="assets/images/image_2026-11-05_8629.jpg" alt="Мікс «Баланс» у кавовому пакеті" class="aspect-[4/3] w-full rounded-xl object-cover">
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#75675D]">Авторський мікс</p>
+            <h3 class="mt-1 text-xl font-bold">Авторський мікс «Баланс»</h3>
+            <p class="mt-2 text-sm text-[#75675D]">Темний шоколад • Фундук • Карамель</p>
+            <div class="mt-4 flex items-center justify-between gap-2"><p class="text-sm text-[#75675D]">250 г</p><p class="whitespace-nowrap font-bold">₴380</p></div>
+            <button type="button" data-add-product class="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#C86445] px-5 py-3 font-semibold text-[#FFFDF9] shadow-sm transition-colors hover:bg-[#B65338] active:bg-[#A64A32] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Додати до кошика</button>
+          </article>
+          <article data-product-id="nutty-morning" class="w-[82%] shrink-0 snap-start rounded-[18px] border border-[#DED3C7] bg-[#FFFDF9] p-4 font-[Manrope,sans-serif] text-[#2B211C] shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg sm:w-auto md:p-6">
+            <img src="assets/images/image_2026-11-05_5113.jpg" alt="Моносорт «Горіховий ранок» у кавовому пакеті" class="aspect-[4/3] w-full rounded-xl object-cover">
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#75675D]">Моносорт</p>
+            <h3 class="mt-1 text-xl font-bold">Моносорт «Горіховий ранок»</h3>
+            <p class="mt-2 text-sm text-[#75675D]">Фундук • Молочний шоколад • Карамель</p>
+            <div class="mt-4 flex items-center justify-between gap-2"><p class="text-sm text-[#75675D]">250 г</p><p class="whitespace-nowrap font-bold">₴380</p></div>
+            <button type="button" data-add-product class="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#C86445] px-5 py-3 font-semibold text-[#FFFDF9] shadow-sm transition-colors hover:bg-[#B65338] active:bg-[#A64A32] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Додати до кошика</button>
+          </article>
+          <article data-product-id="caramel-drip" class="w-[82%] shrink-0 snap-start rounded-[18px] border border-[#DED3C7] bg-[#FFFDF9] p-4 font-[Manrope,sans-serif] text-[#2B211C] shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg sm:w-auto md:p-6">
+            <img src="assets/images/image_2026-11-05_6010.jpg" alt="Дріп-кава «Карамельний настрій» у пакеті" class="aspect-[4/3] w-full rounded-xl object-cover">
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#75675D]">Дріп-кава</p>
+            <h3 class="mt-1 text-xl font-bold">Дріп-кава «Карамельний настрій»</h3>
+            <p class="mt-2 text-sm text-[#75675D]">Карамель • Тости • М'який солодовий посмак</p>
+            <div class="mt-4 flex items-center justify-between gap-2"><p class="text-sm text-[#75675D]">10 пакетиків</p><p class="whitespace-nowrap font-bold">₴290</p></div>
+            <button type="button" data-add-product class="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#C86445] px-5 py-3 font-semibold text-[#FFFDF9] shadow-sm transition-colors hover:bg-[#B65338] active:bg-[#A64A32] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Додати до кошика</button>
+          </article>
+          <article data-product-id="gentle-filter" class="w-[82%] shrink-0 snap-start rounded-[18px] border border-[#DED3C7] bg-[#FFFDF9] p-4 font-[Manrope,sans-serif] text-[#2B211C] shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg sm:w-auto md:p-6">
+            <img src="assets/images/image_2026-11-05_8629.jpg" alt="Мікс «Ніжний фільтр» у кавовому пакеті" class="aspect-[4/3] w-full rounded-xl object-cover">
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#75675D]">Фільтр-мікс</p>
+            <h3 class="mt-1 text-xl font-bold">Мікс «Ніжний фільтр»</h3>
+            <p class="mt-2 text-sm text-[#75675D]">Жовті фрукти • Мед • Какао</p>
+            <div class="mt-4 flex items-center justify-between gap-2"><p class="text-sm text-[#75675D]">250 г</p><p class="whitespace-nowrap font-bold">₴420</p></div>
+            <button type="button" data-add-product class="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#C86445] px-5 py-3 font-semibold text-[#FFFDF9] shadow-sm transition-colors hover:bg-[#B65338] active:bg-[#A64A32] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Додати до кошика</button>
+          </article>
+          <article data-product-id="brazil-serrado" class="w-[82%] shrink-0 snap-start rounded-[18px] border border-[#DED3C7] bg-[#FFFDF9] p-4 font-[Manrope,sans-serif] text-[#2B211C] shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg sm:w-auto md:p-6">
+            <img src="assets/images/image_2026-11-05_5113.jpg" alt="Моносорт «Бразилія Серрадо» у кавовому пакеті" class="aspect-[4/3] w-full rounded-xl object-cover">
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#75675D]">Моносорт</p>
+            <h3 class="mt-1 text-xl font-bold">Бразилія Серрадо</h3>
+            <p class="mt-2 text-sm text-[#75675D]">Лісовий горіх • Карамель • Шоколад</p>
+            <div class="mt-4 flex items-center justify-between gap-2"><p class="text-sm text-[#75675D]">250 г</p><p class="whitespace-nowrap font-bold">₴360</p></div>
+            <button type="button" data-add-product class="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#C86445] px-5 py-3 font-semibold text-[#FFFDF9] shadow-sm transition-colors hover:bg-[#B65338] active:bg-[#A64A32] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Додати до кошика</button>
+          </article>
+          <article data-product-id="steady-espresso" class="w-[82%] shrink-0 snap-start rounded-[18px] border border-[#DED3C7] bg-[#FFFDF9] p-4 font-[Manrope,sans-serif] text-[#2B211C] shadow-sm transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-lg sm:w-auto md:p-6">
+            <img src="assets/images/image_2026-11-05_6010.jpg" alt="Espresso мікс «Стійкий» у кавовому пакеті" class="aspect-[4/3] w-full rounded-xl object-cover">
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-[#75675D]">Еспресо-мікс</p>
+            <h3 class="mt-1 text-xl font-bold">Мікс «Стійкий»</h3>
+            <p class="mt-2 text-sm text-[#75675D]">Шоколад • Горіх • Карамелізована цукрова тростина</p>
+            <div class="mt-4 flex items-center justify-between gap-2"><p class="text-sm text-[#75675D]">250 г</p><p class="whitespace-nowrap font-bold">₴395</p></div>
+            <button type="button" data-add-product class="mt-4 flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#C86445] px-5 py-3 font-semibold text-[#FFFDF9] shadow-sm transition-colors hover:bg-[#B65338] active:bg-[#A64A32] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Додати до кошика</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section section-muted" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Наш процес</p>
+            <h2 id="process-title">Від зерна до вашої чашки</h2>
+          </div>
+          <div class="card-grid process-grid">
+            <article class="card process-card">
+              <p class="step-number">01</p>
+              <h3>Замовлення</h3>
+              <p>Ви обираєте готовий мікс або створюєте свій</p>
+            </article>
+            <article class="card process-card">
+              <p class="step-number">02</p>
+              <h3>Обсмаження</h3>
+              <p>Обсмажуємо зерно під ваш профіль</p>
+            </article>
+            <article class="card process-card">
+              <p class="step-number">03</p>
+              <h3>Пакування</h3>
+              <p>Пакуємо в герметичний клапанний пакет</p>
+            </article>
+            <article class="card process-card">
+              <p class="step-number">04</p>
+              <h3>Відправлення</h3>
+              <p>Надсилаємо свіжу каву протягом 24 годин</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Ваші враження</p>
+            <h2 id="reviews-title">Відгуки покупців</h2>
+          </div>
+          <div class="card-grid reviews-grid">
+            <div class="card">
+              <blockquote>
+                <p>«Враження — смак і свіжість кави. Мікс під власний смак — чудова ідея. Посилку отримав швидко, аромат неймовірний.»</p>
+              </blockquote>
+              <p class="review-author">Ім'я покупця </p>
+            </div>
+            <div class="card">
+              <blockquote>
+                <p>«Конструктор міксу — дуже зручний. Легко налаштувати пропорції зерна й обсмаження. Рекомендую всім любителям кави.»</p>
+              </blockquote>
+              <p class="review-author">Ім'я покупця </p>
+            </div>
+            <div class="card">
+              <blockquote>
+                <p>«Замовляю вже вдруге. Кава справді свіжа, відчувається різниця з магазинною. Приємно бачити походження зерна.»</p>
+              </blockquote>
+              <p class="review-author">Ім'я покупця </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-muted" aria-labelledby="subscription-title">
+        <div class="container subscription-content">
+          <div>
+            <p class="eyebrow">ПІДПИСКА</p>
+            <h2 id="subscription-title">Новини кав'ярні на пошту</h2>
+            <p>Підпишіться, щоб дізнаватися про каву та нові мікси.</p>
+          </div>
+          <form class="subscription-form" action="#" method="post">
+            <label for="subscription-email">Електронна пошта</label>
+            <div class="subscription-controls">
+              <input id="subscription-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+              <button class="button button-primary min-h-[44px] w-full md:w-auto" type="submit">Підписатися</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      </main>
+
+    <footer class="site-footer bg-[#181310] text-[#F5EFE6]">
+      <div class="mx-auto max-w-7xl px-4 py-8 md:py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <a href="index.html" class="inline-flex min-h-[44px] items-center gap-3 rounded-sm transition-colors hover:text-[#C86445] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">
+              <img src="assets/icons/logo1.svg" width="64" height="64" alt="">
+              <span class="font-semibold">Смажена кава</span>
+            </a>
+            <p class="mt-4 max-w-sm text-sm leading-6 text-[#DED3C7]">Створюємо кавові мікси та обсмажуємо їх індивідуально під ваше замовлення.</p>
+          </div>
+          <nav aria-labelledby="footer-navigation-title">
+            <h2 id="footer-navigation-title" class="text-base font-semibold">Навігація</h2>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="catalog.html">Каталог</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="builder.html">Конструктор міксу</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="about.html">Про нас</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="guide.html">Гід по каві</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="contacts.html">Контакти</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="footer-services-title">
+            <h2 id="footer-services-title" class="text-base font-semibold">Покупцям</h2>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="contacts.html">Доставка та оплата</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="contacts.html">Повернення й обмін</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="cart.html">Кошик і оформлення замовлення</a></li>
+              <li><a class="flex min-h-[44px] items-center rounded-sm py-2 text-[#DED3C7] hover:text-[#FFFDF9]" href="guide.html">Гід по каві</a></li>
+            </ul>
+          </nav>
+          <section id="contacts" aria-labelledby="footer-contacts-title">
+            <h2 id="footer-contacts-title" class="text-base font-semibold">Контакти</h2>
+            <address class="mt-4 space-y-3 text-sm not-italic text-[#DED3C7]">
+              <p>Львів. Точну адресу для самовивозу узгодимо перед відвідуванням.</p>
+              <p><a class="flex min-h-[44px] items-center rounded-sm py-2 hover:text-[#FFFDF9]" href="tel:+380000000000">+380 00 000 00 00</a></p>
+              <p><a class="flex min-h-[44px] items-center rounded-sm py-2 hover:text-[#FFFDF9]" href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a></p>
+              <p>Графік: обсмажуємо відповідно до замовлень; час самовивозу узгоджується окремо.</p>
+            </address>
+          </section>
+        </div>
+        <div class="mt-10 border-t border-[#DED3C7]/25 pt-6 text-sm text-[#DED3C7]">
+          <p>© 2026 Смажена кава. Усі права захищено.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

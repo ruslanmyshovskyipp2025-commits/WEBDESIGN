@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакти майстерні «Смажена кава», форма зв'язку, умови доставки, оплати та повернення.">
+    <title>Контакти та інформація покупцям — Смажена кава</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/store.js" defer></script>
+  </head>
+  <body>
+    <div class="page contacts-page">
+      <header class="site-header">
+        <div class="container header-content">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+            <span class="logo-text">Смажена кава</span>
+          </a>
+
+          <nav id="main-navigation" class="header-navigation" aria-label="Головна навігація">
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор</a>
+            <a href="about.html">Про нас</a>
+            <a href="guide.html">Гід по каві</a>
+            <a href="contacts.html" class="is-active" aria-current="page">Контакти</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-icon" href="cart.html" aria-label="Кошик">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Меню" aria-controls="main-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="button button-primary" href="builder.html">Створити свій мікс <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="content-section contacts-intro" aria-labelledby="contacts-title">
+          <div class="container">
+            <div class="contacts-heading">
+              <p class="eyebrow">МИ НА ЗВ'ЯЗКУ</p>
+              <h1 id="contacts-title">Контакти та інформація покупцям</h1>
+              <p>Потрібна допомога з вибором кави чи запитанням щодо замовлення? Напишіть або зателефонуйте нам.</p>
+            </div>
+
+            <div class="contact-columns">
+              <section class="contact-card contact-details" aria-labelledby="contact-details-title">
+                <p class="eyebrow">МАЙСТЕРНЯ «СМАЖЕНА КАВА»</p>
+                <h2 id="contact-details-title">Контакти та соцмережі</h2>
+                <address class="contact-methods">
+                  <div class="contact-method">
+                    <i class="fas fa-location-dot" aria-hidden="true"></i>
+                    <p><strong>Ростерія та самовивіз</strong><span>Львів. Точну адресу узгодимо перед самовивозом.</span></p>
+                  </div>
+                  <div class="contact-method">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <p><strong>Телефон</strong><a href="tel:+380000000000">+380 00 000 00 00</a></p>
+                  </div>
+                  <div class="contact-method">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <p><strong>Електронна пошта</strong><a href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a></p>
+                  </div>
+                  <div class="contact-method">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <p><strong>Графік обсмажувального цеху</strong><span>Обсмажуємо відповідно до отриманих замовлень. Час самовивозу узгоджується окремо.</span></p>
+                  </div>
+                </address>
+                <div class="social-links" aria-label="Соціальні мережі">
+                  <a class="button button-secondary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+                  </a>
+                  <a class="button button-secondary" href="https://t.me/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram" aria-hidden="true"></i> Telegram
+                  </a>
+                </div>
+              </section>
+
+              <section class="contact-card contact-form-card" aria-labelledby="contact-form-title">
+                <p class="eyebrow">НАПИШІТЬ НАМ</p>
+                <h2 id="contact-form-title">Форма зв'язку</h2>
+                <form class="contact-form" action="#" method="post">
+                  <div class="form-field">
+                    <label for="contact-name">Ваше ім'я</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-reply">Email або телефон</label>
+                    <input id="contact-reply" name="reply-to" type="text" placeholder="name@example.com або +380..." aria-describedby="contact-reply-hint" required>
+                    <small id="contact-reply-hint">Залиште email або номер, за яким зручно відповісти.</small>
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-topic">Тема звернення</label>
+                    <select id="contact-topic" name="topic" required>
+                      <option value="" selected disabled>Оберіть тему</option>
+                      <option value="order">Питання щодо замовлення</option>
+                      <option value="blend">Допомога з вибором міксу</option>
+                      <option value="partnership">Співпраця</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-message">Повідомлення</label>
+                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                  </div>
+                  <label class="privacy-consent">
+                    <input name="privacy-consent" type="checkbox" required>
+                    <span>Погоджуюся на обробку персональних даних для відповіді на моє звернення.</span>
+                  </label>
+                  <button class="button contact-submit" type="submit">Надіслати повідомлення</button>
+                </form>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section buyer-info-section" aria-labelledby="delivery-title">
+          <div class="container">
+            <div class="section-heading contact-section-heading">
+              <p class="eyebrow">ЯК ОТРИМАТИ ЗАМОВЛЕННЯ</p>
+              <h2 id="delivery-title">Умови доставки та оплати</h2>
+            </div>
+            <div class="buyer-info-grid">
+              <article class="card buyer-info-card">
+                <p class="buyer-info-number">01</p>
+                <h3>Свіже обсмаження та відправка</h3>
+                <p>Обсмажуємо каву після замовлення та передаємо її в доставку в день обсмаження. Термін у дорозі залежить від обраної служби доставки.</p>
+              </article>
+              <article class="card buyer-info-card">
+                <p class="buyer-info-number">02</p>
+                <h3>Способи доставки</h3>
+                <ul>
+                  <li>Нова пошта — у відділення або поштомат.</li>
+                  <li>Укрпошта — до обраного відділення.</li>
+                  <li>Самовивіз із ростерії у Львові за попереднім узгодженням.</li>
+                </ul>
+              </article>
+              <article class="card buyer-info-card">
+                <p class="buyer-info-number">03</p>
+                <h3>Способи оплати</h3>
+                <ul>
+                  <li>Онлайн-оплата банківською карткою.</li>
+                  <li>Оплата при отриманні, якщо її підтримує обрана служба доставки.</li>
+                  <li>Для самовивозу спосіб оплати узгоджується під час підтвердження замовлення.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section returns-section" aria-labelledby="returns-title">
+          <div class="container">
+            <div class="section-heading contact-section-heading">
+              <p class="eyebrow">ВАША ВПЕВНЕНІСТЬ У ПОКУПЦІ</p>
+              <h2 id="returns-title">Політика повернення та обміну</h2>
+              <p>Ми дбаємо про якість зерна та готові допомогти, якщо з вашим замовленням щось не так.</p>
+            </div>
+            <div class="returns-grid">
+              <article class="card returns-card">
+                <h3>Товар належної якості</h3>
+                <p>Якщо ви передумали після отримання замовлення, зв'яжіться з нами до відкриття упаковки. Можливість повернення чи обміну узгоджується відповідно до чинних правил для харчових продуктів.</p>
+              </article>
+              <article class="card returns-card">
+                <h3>Пошкодження або помилка в замовленні</h3>
+                <p>Якщо отримали пошкоджений товар або не ту позицію, напишіть нам і додайте номер замовлення та фото пакування. Ми розглянемо звернення й узгодимо заміну або повернення коштів.</p>
+              </article>
+              <article class="card returns-card returns-freshness-card">
+                <h3>Гарантія свіжості</h3>
+                <p>Обсмажуємо каву під замовлення та пакуємо зерно в пакет із дегазаційним клапаном. Якщо маєте питання до свіжості партії — зв'яжіться з нами, вказавши номер замовлення.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">
+              <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+              <span class="logo-text">Смажена кава</span>
+            </a>
+            <p>Світлий інтернет-магазин кави з обсмаженням під замовлення та конструктором власного міксу.</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Навігація в підвалі">
+            <h2>Навігація</h2>
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор міксу</a>
+            <a href="cart.html">Кошик і оформлення замовлення</a>
+            <a href="about.html">Про нас і процес обсмаження</a>
+            <a href="guide.html">Підбір кави та FAQ</a>
+            <a href="contacts.html">Контакти й інформація покупцям</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Корисна інформація">
+            <h2>Покупцям</h2>
+            <a href="contacts.html">Доставка та оплата</a>
+            <a href="contacts.html">Повернення й обмін</a>
+            <a href="contacts.html">Політика конфіденційності</a>
+            <a href="contacts.html">Умови користування</a>
+          </nav>
+
+          <div class="footer-column" id="contacts">
+            <h2>Контакти</h2>
+            <address>
+              <a href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a>
+              <a href="tel:+380000000000">+380 00 000 00 00</a>
+            </address>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© Смажена кава. Усі права захищені.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

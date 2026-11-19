@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Перевірте кошик, заповніть контактні дані та оформіть замовлення свіжообсмаженої кави.">
+    <title>Кошик та оформлення замовлення — Смажена кава</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/store.js" defer></script>
+  </head>
+  <body>
+    <div class="page cart-page">
+      <header class="site-header">
+        <div class="container header-content">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+            <span class="logo-text">Смажена кава</span>
+          </a>
+
+          <nav id="main-navigation" class="header-navigation" aria-label="Головна навігація">
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор</a>
+            <a href="about.html">Про нас</a>
+            <a href="guide.html">Гід по каві</a>
+            <a href="contacts.html">Контакти</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-icon is-active" href="cart.html" aria-label="Кошик" aria-current="page">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Меню" aria-controls="main-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="button button-primary" href="builder.html">Створити свій мікс <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="content-section cart-section" id="cart-section" aria-labelledby="cart-title">
+          <div class="container">
+            <p class="eyebrow cart-eyebrow">ВАШЕ ЗАМОВЛЕННЯ</p>
+            <h1 id="cart-title">Кошик та оформлення замовлення</h1>
+
+            <section class="cart-block" aria-labelledby="items-title">
+              <div class="cart-block-heading">
+                <h2 id="items-title">1. Перевірка та редагування товарів</h2>
+                <p class="cart-item-count" id="cart-item-count">2 позиції</p>
+              </div>
+
+              <div class="cart-items" id="cart-items">
+                <article class="cart-item" data-product="custom-blend" data-unit-price="420">
+                  <img class="cart-item-image" src="assets/images/image_2026-11-05_8629.jpg" alt="Пакування кавового міксу з ілюстраціями шоколаду та фруктів.">
+                  <div class="cart-item-info">
+                    <h3 class="cart-item-title">Власний мікс</h3>
+                    <p class="cart-item-description">Ефіопія 60% + Бразилія 40%, середнє обсмаження, у зернах, 250 г</p>
+                    <a class="cart-edit-link" href="builder.html">Редагувати мікс</a>
+                  </div>
+                  <div class="cart-item-controls">
+                    <div class="quantity-control" aria-label="Кількість власного міксу">
+                      <button class="quantity-button" type="button" data-quantity-decrease aria-label="Зменшити кількість власного міксу">−</button>
+                      <output class="quantity-value" aria-live="polite">1</output>
+                      <button class="quantity-button" type="button" data-quantity-increase aria-label="Збільшити кількість власного міксу">+</button>
+                    </div>
+                    <button class="remove-item" type="button" data-remove-item>Видалити</button>
+                  </div>
+                  <p class="cart-item-price">₴<span data-line-total>420</span></p>
+                </article>
+
+                <article class="cart-item" data-product="balance" data-unit-price="380">
+                  <img class="cart-item-image" src="assets/images/image_2026-11-05_8629.jpg" alt="Пакування авторського міксу «Баланс».">
+                  <div class="cart-item-info">
+                    <h3 class="cart-item-title">Авторський мікс «Баланс»</h3>
+                    <p class="cart-item-description">Темний шоколад, фундук і карамель, середнє обсмаження, 250 г</p>
+                  </div>
+                  <div class="cart-item-controls">
+                    <div class="quantity-control" aria-label="Кількість міксу «Баланс»">
+                      <button class="quantity-button" type="button" data-quantity-decrease aria-label="Зменшити кількість міксу «Баланс»">−</button>
+                      <output class="quantity-value" aria-live="polite">1</output>
+                      <button class="quantity-button" type="button" data-quantity-increase aria-label="Збільшити кількість міксу «Баланс»">+</button>
+                    </div>
+                    <button class="remove-item" type="button" data-remove-item>Видалити</button>
+                  </div>
+                  <p class="cart-item-price">₴<span data-line-total>380</span></p>
+                </article>
+              </div>
+
+              <p class="cart-empty-message" id="cart-empty-message" hidden>У кошику поки немає товарів. <a href="catalog.html">Переглянути каталог</a></p>
+              <div class="cart-subtotal">
+                <span>Разом за товари</span>
+                <output id="cart-subtotal" aria-live="polite">₴800</output>
+              </div>
+            </section>
+
+            <section class="cart-block checkout-block" id="checkout-section" aria-labelledby="checkout-title">
+              <h2 id="checkout-title">2. Контактні дані, доставка й оплата</h2>
+              <form class="checkout-form" id="checkout-form" action="cart.html" method="get">
+                <div class="checkout-fields">
+                  <div class="checkout-contact">
+                    <h3>Контактні дані</h3>
+                    <div class="form-field">
+                      <label for="customer-name">Ім'я та прізвище</label>
+                      <input id="customer-name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                      <label for="customer-phone">Телефон <span aria-hidden="true">*</span></label>
+                      <input id="customer-phone" name="phone" type="tel" autocomplete="tel" placeholder="+380 67 123 45 67" pattern="[+]?[0-9 ()-]{10,20}" aria-describedby="phone-hint" required>
+                      <small id="phone-hint">Введіть номер у форматі +380 67 123 45 67.</small>
+                    </div>
+                    <div class="form-field">
+                      <label for="customer-email">Email</label>
+                      <input id="customer-email" name="email" type="email" autocomplete="email">
+                    </div>
+                  </div>
+
+                  <fieldset class="checkout-choice-group">
+                    <legend>Доставка</legend>
+                    <label class="checkout-choice">
+                      <input type="radio" name="delivery" value="nova-poshta" checked>
+                      <span class="checkout-choice-card">
+                        <span class="checkout-choice-title">Нова пошта</span>
+                        <span class="checkout-choice-description">У відділення або поштомат</span>
+                        <span class="checkout-choice-indicator" aria-hidden="true">✓ Обрано</span>
+                      </span>
+                    </label>
+                    <label class="checkout-choice">
+                      <input type="radio" name="delivery" value="courier">
+                      <span class="checkout-choice-card">
+                        <span class="checkout-choice-title">Кур'єр</span>
+                        <span class="checkout-choice-description">Доставка за вашою адресою</span>
+                        <span class="checkout-choice-indicator" aria-hidden="true">✓ Обрано</span>
+                      </span>
+                    </label>
+                    <label class="checkout-choice">
+                      <input type="radio" name="delivery" value="pickup">
+                      <span class="checkout-choice-card">
+                        <span class="checkout-choice-title">Самовивіз</span>
+                        <span class="checkout-choice-description">Із ростерії у Львові</span>
+                        <span class="checkout-choice-indicator" aria-hidden="true">✓ Обрано</span>
+                      </span>
+                    </label>
+                  </fieldset>
+
+                  <fieldset class="checkout-choice-group payment-choice-group">
+                    <legend>Оплата</legend>
+                    <label class="checkout-choice">
+                      <input type="radio" name="payment" value="card" checked>
+                      <span class="checkout-choice-card">
+                        <span class="checkout-choice-title">Онлайн-оплата карткою</span>
+                        <span class="checkout-choice-indicator" aria-hidden="true">✓ Обрано</span>
+                      </span>
+                    </label>
+                    <label class="checkout-choice">
+                      <input type="radio" name="payment" value="upon-receipt">
+                      <span class="checkout-choice-card">
+                        <span class="checkout-choice-title">Оплата при отриманні</span>
+                        <span class="checkout-choice-indicator" aria-hidden="true">✓ Обрано</span>
+                      </span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <aside class="checkout-summary" aria-labelledby="summary-title">
+                  <h3 id="summary-title">Підсумок замовлення</h3>
+                  <p><span>Товарів</span><span id="summary-item-count">2</span></p>
+                  <p class="checkout-total"><span>До сплати</span><output id="checkout-total">₴800</output></p>
+                  <button class="button checkout-submit" type="submit">Підтвердити замовлення</button>
+                  <p class="checkout-privacy-note">Натискаючи кнопку, ви підтверджуєте правильність контактних даних.</p>
+                  <p class="checkout-error" id="checkout-error" role="status" aria-live="polite" hidden></p>
+                </aside>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <section class="content-section order-confirmation" id="confirmation-section" aria-labelledby="confirmation-title" aria-live="polite" hidden>
+          <div class="container confirmation-card">
+            <p class="confirmation-indicator"><i class="fas fa-circle-check" aria-hidden="true"></i> Замовлення оформлено</p>
+            <h1 id="confirmation-title" tabindex="-1">Замовлення #1048 підтверджено</h1>
+            <p class="confirmation-message">Ваш мікс прийнято в роботу та буде обсмажено сьогодні.</p>
+            <div class="confirmation-summary">
+              <h2>Коротке зведення</h2>
+              <p id="confirmation-items">Ваше замовлення готується.</p>
+              <p>До сплати: <strong id="confirmation-total">₴800</strong></p>
+            </div>
+            <a class="button confirmation-home-button" href="index.html">Повернутися на головну</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">
+              <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+              <span class="logo-text">Смажена кава</span>
+            </a>
+            <p>Світлий інтернет-магазин кави з обсмаженням під замовлення та конструктором власного міксу.</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Навігація в підвалі">
+            <h2>Навігація</h2>
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор міксу</a>
+            <a href="cart.html">Кошик і оформлення замовлення</a>
+            <a href="about.html">Про нас і процес обсмаження</a>
+            <a href="guide.html">Підбір кави та FAQ</a>
+            <a href="contacts.html">Контакти й інформація покупцям</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Корисна інформація">
+            <h2>Покупцям</h2>
+            <a href="contacts.html">Доставка та оплата</a>
+            <a href="contacts.html">Повернення й обмін</a>
+            <a href="contacts.html">Політика конфіденційності</a>
+            <a href="contacts.html">Умови користування</a>
+          </nav>
+
+          <div class="footer-column" id="contacts">
+            <h2>Контакти</h2>
+            <address>
+              <a href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a>
+              <a href="tel:+380000000000">+380 00 000 00 00</a>
+            </address>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© Смажена кава. Усі права захищені.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

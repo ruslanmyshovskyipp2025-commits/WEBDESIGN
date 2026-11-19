@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Створіть власний кавовий мікс: оберіть зерно, пропорції, обсмаження, помел і пакування.">
+    <title>Конструктор власного кавового міксу — Смажена кава</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/store.js" defer></script>
+  </head>
+  <body>
+    <div class="page builder-page">
+      <header class="site-header">
+        <div class="container header-content">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+            <span class="logo-text">Смажена кава</span>
+          </a>
+
+          <nav id="main-navigation" class="header-navigation" aria-label="Головна навігація">
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html" class="is-active" aria-current="page">Конструктор</a>
+            <a href="about.html">Про нас</a>
+            <a href="guide.html">Гід по каві</a>
+            <a href="contacts.html">Контакти</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-icon" href="cart.html" aria-label="Кошик">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Меню" aria-controls="main-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="button button-primary" href="builder.html">Створити свій мікс <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="content-section builder-section" id="builder" aria-labelledby="builder-title">
+          <div class="container">
+            <div class="section-heading builder-heading">
+              <p class="eyebrow">CUSTOM BLEND BUILDER</p>
+              <h1 id="builder-title">Конструктор власного кавового міксу</h1>
+              <p>Поєднайте улюблені зерна та налаштуйте мікс під свій смак.</p>
+            </div>
+
+            <ol class="builder-progress" aria-label="Кроки створення міксу">
+              <li><a href="#step-beans" aria-current="step">1. Зерно та пропорції</a></li>
+              <li><a href="#step-roast">2. Обсмаження та помел</a></li>
+              <li><a href="#step-package">3. Пакування</a></li>
+            </ol>
+
+            <form class="builder-form" id="blend-builder-form" action="cart.html" method="get">
+              <input type="hidden" name="product" value="custom-blend">
+              <input type="hidden" id="blend-price" name="price" value="420">
+              <div class="builder-workspace">
+                <div class="builder-controls">
+                  <section class="builder-step" id="step-beans" aria-labelledby="beans-step-title">
+                    <h2 id="beans-step-title">1. Зерно та пропорції</h2>
+
+                    <fieldset class="bean-group">
+                      <legend>Зерно А</legend>
+                      <div class="bean-choice-grid">
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-a" value="ethiopia" data-name="Ефіопія" checked>
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Ефіопія</span>
+                            <span class="bean-choice-notes">Жасмин, бергамот, стиглий персик</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-a" value="brazil" data-name="Бразилія">
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Бразилія</span>
+                            <span class="bean-choice-notes">Молочний шоколад, фундук, карамель</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-a" value="colombia" data-name="Колумбія">
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Колумбія</span>
+                            <span class="bean-choice-notes">Червоне яблуко, іриска, цитрус</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-a" value="guatemala" data-name="Гватемала">
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Гватемала</span>
+                            <span class="bean-choice-notes">Какао, червона слива, прянощі</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="bean-group">
+                      <legend>Зерно Б</legend>
+                      <div class="bean-choice-grid">
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-b" value="ethiopia" data-name="Ефіопія">
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Ефіопія</span>
+                            <span class="bean-choice-notes">Жасмин, бергамот, стиглий персик</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-b" value="brazil" data-name="Бразилія" checked>
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Бразилія</span>
+                            <span class="bean-choice-notes">Молочний шоколад, фундук, карамель</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-b" value="colombia" data-name="Колумбія">
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Колумбія</span>
+                            <span class="bean-choice-notes">Червоне яблуко, іриска, цитрус</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                        <label class="bean-choice">
+                          <input type="radio" name="bean-b" value="guatemala" data-name="Гватемала">
+                          <span class="bean-choice-card">
+                            <span class="bean-choice-name">Гватемала</span>
+                            <span class="bean-choice-notes">Какао, червона слива, прянощі</span>
+                            <span class="selection-indicator" aria-hidden="true">✓ Обрано</span>
+                          </span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <div class="blend-presets" aria-label="Швидкі пресети пропорцій">
+                      <span class="blend-presets-label">Швидкі пропорції</span>
+                      <button class="button preset-button" type="button" data-share-a="50" data-share-b="50" aria-pressed="true">50% / 50%</button>
+                      <button class="button preset-button" type="button" data-share-a="70" data-share-b="30" aria-pressed="false">70% / 30%</button>
+                      <button class="button preset-button" type="button" data-share-a="80" data-share-b="20" aria-pressed="false">80% / 20%</button>
+                    </div>
+
+                    <div class="blend-share-controls">
+                      <div class="share-control">
+                        <label for="share-a">Частка зерна А, %</label>
+                        <input id="share-a" name="share-a" type="number" min="0" max="100" step="1" value="50" inputmode="numeric">
+                        <input id="share-a-range" type="range" min="0" max="100" step="1" value="50" aria-label="Частка зерна А, від 0 до 100 відсотків" aria-describedby="share-status">
+                      </div>
+                      <div class="share-control">
+                        <label for="share-b">Частка зерна Б, %</label>
+                        <input id="share-b" name="share-b" type="number" min="0" max="100" step="1" value="50" inputmode="numeric">
+                        <input id="share-b-range" type="range" min="0" max="100" step="1" value="50" aria-label="Частка зерна Б, від 0 до 100 відсотків" aria-describedby="share-status">
+                      </div>
+                    </div>
+                    <p class="share-validation is-valid" id="share-status" role="status" aria-live="polite" aria-atomic="true">Разом 100% — готово до замовлення</p>
+                  </section>
+
+                  <section class="builder-step" id="step-roast" aria-labelledby="roast-step-title">
+                    <h2 id="roast-step-title">2. Обсмаження та помел</h2>
+                    <div class="blend-options-grid">
+                      <div class="form-field">
+                        <label for="roast-level">Ступінь обсмаження</label>
+                        <select class="builder-select" id="roast-level" name="roast">
+                          <option value="light">Світле</option>
+                          <option value="medium" selected>Середнє</option>
+                          <option value="dark">Темне</option>
+                        </select>
+                      </div>
+                      <div class="form-field">
+                        <label for="grind-level">Помел</label>
+                        <select class="builder-select" id="grind-level" name="grind">
+                          <option value="beans" selected>У зернах</option>
+                          <option value="espresso">Еспресо</option>
+                          <option value="filter">Фільтр</option>
+                          <option value="cezve">Турка</option>
+                        </select>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="builder-step" id="step-package" aria-labelledby="package-step-title">
+                    <h2 id="package-step-title">3. Вага та пакування</h2>
+                    <div class="blend-options-grid">
+                      <div class="form-field">
+                        <label for="package-weight">Вага</label>
+                        <select class="builder-select" id="package-weight" name="weight">
+                          <option value="250" data-price="420" selected>250 г</option>
+                          <option value="500" data-price="780">500 г</option>
+                          <option value="1000" data-price="1500">1000 г</option>
+                        </select>
+                      </div>
+                      <div class="form-field">
+                        <label for="package-type">Тип пакування</label>
+                        <select class="builder-select" id="package-type" name="packaging">
+                          <option value="kraft" data-surcharge="0" selected>Крафт-пакет із клапаном</option>
+                          <option value="gift-tube" data-surcharge="180">Подарунковий тубус (+ ₴180)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <aside class="live-preview" aria-labelledby="preview-title">
+                  <p class="eyebrow">LIVE PREVIEW</p>
+                  <h2 id="preview-title">Ваш мікс</h2>
+                  <dl class="preview-mix">
+                    <div>
+                      <dt>Склад</dt>
+                      <dd><span id="preview-bean-a">Ефіопія</span> <span id="preview-share-a">50%</span> / <span id="preview-bean-b">Бразилія</span> <span id="preview-share-b">50%</span></dd>
+                    </div>
+                    <div><dt>Обсмаження</dt><dd id="preview-roast">Середнє</dd></div>
+                    <div><dt>Помел</dt><dd id="preview-grind">У зернах</dd></div>
+                    <div><dt>Пакування</dt><dd><span id="preview-weight">250 г</span>, <span id="preview-package">крафт-пакет із клапаном</span></dd></div>
+                  </dl>
+                  <p class="preview-timeline"><i class="fas fa-fire" aria-hidden="true"></i> Обсмажимо сьогодні</p>
+                  <p class="preview-price"><span>Вартість</span><output id="preview-price" data-live-price aria-live="polite">₴420</output></p>
+                  <button class="button preview-submit" type="submit">
+                    Додати до кошика — <span data-live-price>₴420</span>
+                  </button>
+                </aside>
+              </div>
+
+              <div class="builder-mobile-bar">
+                <span class="builder-mobile-price">Вартість <output data-live-price>₴420</output></span>
+                <button class="button builder-mobile-submit" type="submit" aria-label="Додати до кошика">
+                  Додати до кошика — <span data-live-price>₴420</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">
+              <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+              <span class="logo-text">Смажена кава</span>
+            </a>
+            <p>Світлий інтернет-магазин кави з обсмаженням під замовлення та конструктором власного міксу.</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Навігація в підвалі">
+            <h2>Навігація</h2>
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор міксу</a>
+            <a href="cart.html">Кошик і оформлення замовлення</a>
+            <a href="about.html">Про нас і процес обсмаження</a>
+            <a href="guide.html">Підбір кави та FAQ</a>
+            <a href="contacts.html">Контакти й інформація покупцям</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Корисна інформація">
+            <h2>Покупцям</h2>
+            <a href="contacts.html">Доставка та оплата</a>
+            <a href="contacts.html">Повернення й обмін</a>
+            <a href="contacts.html">Політика конфіденційності</a>
+            <a href="contacts.html">Умови користування</a>
+          </nav>
+
+          <div class="footer-column" id="contacts">
+            <h2>Контакти</h2>
+            <address>
+              <a href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a>
+              <a href="tel:+380000000000">+380 00 000 00 00</a>
+            </address>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© Смажена кава. Усі права захищені.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Авторський кавовий мікс «Баланс» — шоколад, фундук і карамель. Свіже обсмаження в день замовлення.">
+    <title>Авторський мікс «Баланс» — Смажена кава</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navigation.js" defer></script>
+    <script src="js/store.js" defer></script>
+  </head>
+  <body>
+    <div class="page product-page">
+      <header class="site-header">
+        <div class="container header-content">
+          <a href="index.html" class="logo">
+            <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+            <span class="logo-text">Смажена кава</span>
+          </a>
+
+          <nav id="main-navigation" class="header-navigation" aria-label="Головна навігація">
+            <a href="catalog.html" class="is-active">Каталог</a>
+            <a href="builder.html">Конструктор</a>
+            <a href="about.html">Про нас</a>
+            <a href="guide.html">Гід по каві</a>
+            <a href="contacts.html">Контакти</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="cart-icon" href="cart.html" aria-label="Кошик">
+              <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Меню" aria-controls="main-navigation" aria-expanded="false">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="button button-primary" href="builder.html">Створити свій мікс <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="content-section product-section" aria-labelledby="product-title">
+          <div class="container">
+            <nav class="breadcrumbs product-breadcrumbs" aria-label="Хлібні крихти">
+              <a href="index.html">Головна</a>
+              <span aria-hidden="true">→</span>
+              <a href="catalog.html">Каталог</a>
+              <span aria-hidden="true">→</span>
+              <span aria-current="page">Авторський мікс «Баланс»</span>
+            </nav>
+
+            <div class="product-main">
+              <div class="product-gallery">
+                <figure class="product-hero-image">
+                  <img src="assets/images/image_2026-11-05_8629.jpg" alt="Пакет авторського кавового міксу «Баланс» з ілюстраціями шоколаду та фруктів.">
+                </figure>
+                <p class="freshness-note">
+                  <i class="fas fa-seedling" aria-hidden="true"></i>
+                  Обсмажуємо в день замовлення
+                </p>
+              </div>
+
+              <div class="product-summary">
+                <p class="eyebrow product-category">Авторський мікс</p>
+                <h1 id="product-title">Авторський мікс «Баланс»</h1>
+                <p class="product-intro">Збалансований купаж Бразилії та Колумбії з виразними нотами темного шоколаду, фундука й карамелі. Добре смакує як у чистому еспресо, так і з молоком.</p>
+
+                <section class="flavor-profile" aria-labelledby="flavor-profile-title">
+                  <h2 id="flavor-profile-title">Смаковий профіль</h2>
+                  <div class="flavor-metric">
+                    <div class="flavor-label"><span>Кислотність</span><span>2/5</span></div>
+                    <div class="flavor-scale" role="meter" aria-label="Кислотність" aria-valuemin="0" aria-valuemax="5" aria-valuenow="2">
+                      <span class="flavor-scale-fill flavor-scale-two"></span>
+                    </div>
+                  </div>
+                  <div class="flavor-metric">
+                    <div class="flavor-label"><span>Солодкість</span><span>4/5</span></div>
+                    <div class="flavor-scale" role="meter" aria-label="Солодкість" aria-valuemin="0" aria-valuemax="5" aria-valuenow="4">
+                      <span class="flavor-scale-fill flavor-scale-four"></span>
+                    </div>
+                  </div>
+                  <div class="flavor-metric">
+                    <div class="flavor-label"><span>Тіло</span><span>4/5</span></div>
+                    <div class="flavor-scale" role="meter" aria-label="Тіло" aria-valuemin="0" aria-valuemax="5" aria-valuenow="4">
+                      <span class="flavor-scale-fill flavor-scale-four"></span>
+                    </div>
+                  </div>
+                </section>
+
+                <form class="product-buy-form" action="cart.html" method="get">
+                  <input type="hidden" name="product" value="balance">
+                  <input id="package-price" type="hidden" name="price" value="380">
+                  <div class="product-selects">
+                    <div class="form-field">
+                      <label for="package-weight">Вага пакування</label>
+                      <select id="package-weight" name="weight">
+                        <option value="250" data-price="380" selected>250 г — ₴380</option>
+                        <option value="500" data-price="720">500 г — ₴720</option>
+                        <option value="1000" data-price="1380">1000 г — ₴1 380</option>
+                      </select>
+                    </div>
+                    <div class="form-field">
+                      <label for="coffee-grind">Помел</label>
+                      <select id="coffee-grind" name="grind">
+                        <option value="beans">У зернах</option>
+                        <option value="espresso">Еспресо</option>
+                        <option value="filter">Фільтр</option>
+                        <option value="drip">Дріп</option>
+                        <option value="cezve">Турка</option>
+                      </select>
+                    </div>
+                  </div>
+                  <p class="selected-price">Ціна: <output id="product-price" for="package-weight" aria-live="polite">₴380</output></p>
+                  <button class="button button-primary product-buy-button" type="submit">
+                    Додати до кошика — <span id="purchase-button-price">₴380</span>
+                  </button>
+                  <a class="button button-secondary product-builder-link" href="builder.html">Взяти за основу в конструкторі</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section product-details-section" aria-labelledby="origin-title">
+          <div class="container product-details-container">
+            <div class="section-heading product-section-heading">
+              <p class="eyebrow">ПРО ЗЕРНО</p>
+              <h2 id="origin-title">Походження та характеристики</h2>
+            </div>
+            <dl class="origin-details">
+              <div class="origin-detail">
+                <dt>Країна / регіон</dt>
+                <dd>Бразилія, Можіана + Колумбія, Уїла</dd>
+              </div>
+              <div class="origin-detail">
+                <dt>Висота зростання</dt>
+                <dd>800–1 200 м / 1 500–1 900 м</dd>
+              </div>
+              <div class="origin-detail">
+                <dt>Спосіб обробки</dt>
+                <dd>Натуральна / митий</dd>
+              </div>
+              <div class="origin-detail">
+                <dt>Ступінь обсмаження</dt>
+                <dd>Середнє</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="content-section brewing-section" aria-labelledby="brewing-title">
+          <div class="container">
+            <div class="section-heading product-section-heading">
+              <p class="eyebrow">ЗАВАРЮВАННЯ</p>
+              <h2 id="brewing-title">Рекомендації щодо заварювання</h2>
+            </div>
+            <div class="brewing-grid">
+              <article class="card brewing-card">
+                <h3>Еспресо</h3>
+                <dl>
+                  <div><dt>Температура води</dt><dd>92–94 °C</dd></div>
+                  <div><dt>Кава / вода</dt><dd>18 г / 36 г</dd></div>
+                  <div><dt>Час екстракції</dt><dd>25–30 с</dd></div>
+                </dl>
+              </article>
+              <article class="card brewing-card">
+                <h3>Фільтр / пуровер</h3>
+                <dl>
+                  <div><dt>Температура води</dt><dd>92–94 °C</dd></div>
+                  <div><dt>Кава / вода</dt><dd>15 г / 250 г</dd></div>
+                  <div><dt>Час екстракції</dt><dd>2:30–3:00 хв</dd></div>
+                </dl>
+              </article>
+              <article class="card brewing-card">
+                <h3>Турка</h3>
+                <dl>
+                  <div><dt>Температура води</dt><dd>Холодна на старті</dd></div>
+                  <div><dt>Кава / вода</dt><dd>10 г / 100 мл</dd></div>
+                  <div><dt>Час екстракції</dt><dd>3–4 хв</dd></div>
+                </dl>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-about">
+            <a href="index.html" class="logo">
+              <img src="assets/icons/logo1.svg" alt="" width="64" height="64">
+              <span class="logo-text">Смажена кава</span>
+            </a>
+            <p>Світлий інтернет-магазин кави з обсмаженням під замовлення та конструктором власного міксу.</p>
+          </div>
+
+          <nav class="footer-column" aria-label="Навігація в підвалі">
+            <h2>Навігація</h2>
+            <a href="index.html">Головна</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="builder.html">Конструктор міксу</a>
+            <a href="cart.html">Кошик і оформлення замовлення</a>
+            <a href="about.html">Про нас і процес обсмаження</a>
+            <a href="guide.html">Підбір кави та FAQ</a>
+            <a href="contacts.html">Контакти й інформація покупцям</a>
+          </nav>
+
+          <nav class="footer-column" aria-label="Корисна інформація">
+            <h2>Покупцям</h2>
+            <a href="contacts.html">Доставка та оплата</a>
+            <a href="contacts.html">Повернення й обмін</a>
+            <a href="contacts.html">Політика конфіденційності</a>
+            <a href="contacts.html">Умови користування</a>
+          </nav>
+
+          <div class="footer-column" id="contacts">
+            <h2>Контакти</h2>
+            <address>
+              <a href="mailto:hello@smashena-kava.ua">hello@smashena-kava.ua</a>
+              <a href="tel:+380000000000">+380 00 000 00 00</a>
+            </address>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© Смажена кава. Усі права захищені.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
