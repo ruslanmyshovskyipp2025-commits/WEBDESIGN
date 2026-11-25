@@ -502,12 +502,10 @@
         }
       }
     });
-    document.querySelectorAll(".contact-form, .subscription-form").forEach((form) => {
+    document.querySelectorAll(".subscription-form").forEach((form) => {
       form.addEventListener("submit", (event) => {
         event.preventDefault();
-        showToast(form.classList.contains("contact-form")
-          ? "Дякуємо! Ваше звернення прийнято."
-          : "Дякуємо за підписку!");
+        showToast("Дякуємо за підписку!");
         form.reset();
       });
     });

@@ -9,9 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/navigation.js" defer></script>
     <script src="js/store.js" defer></script>
+    <script src="js/validation.js" defer></script>
   </head>
   <body>
     <div class="page contacts-page">
@@ -89,34 +91,45 @@
               <section class="contact-card contact-form-card" aria-labelledby="contact-form-title">
                 <p class="eyebrow">НАПИШІТЬ НАМ</p>
                 <h2 id="contact-form-title">Форма зв'язку</h2>
-                <form class="contact-form" action="#" method="post">
+                <form id="feedbackForm" class="contact-form grid grid-cols-1 gap-4 md:grid-cols-2" action="#" method="post" novalidate>
                   <div class="form-field">
-                    <label for="contact-name">Ваше ім'я</label>
-                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                    <label for="username">Ваше ім'я</label>
+                    <input id="username" name="username" type="text" autocomplete="name" required aria-describedby="usernameError" aria-invalid="false" class="min-h-[44px] rounded-xl border border-[#DED3C7] bg-[#FFFDF9] text-[#2B211C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">
+                    <p id="usernameError" class="hidden mt-1 text-sm !text-red-600" role="alert"></p>
                   </div>
                   <div class="form-field">
-                    <label for="contact-reply">Email або телефон</label>
-                    <input id="contact-reply" name="reply-to" type="text" placeholder="name@example.com або +380..." aria-describedby="contact-reply-hint" required>
-                    <small id="contact-reply-hint">Залиште email або номер, за яким зручно відповісти.</small>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailError" aria-invalid="false" class="min-h-[44px] rounded-xl border border-[#DED3C7] bg-[#FFFDF9] text-[#2B211C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">
+                    <p id="emailError" class="hidden mt-1 text-sm !text-red-600" role="alert"></p>
                   </div>
                   <div class="form-field">
-                    <label for="contact-topic">Тема звернення</label>
-                    <select id="contact-topic" name="topic" required>
+                    <label for="phone">Телефон (формат +380XXXXXXXXX)</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="phoneError" aria-invalid="false" class="min-h-[44px] rounded-xl border border-[#DED3C7] bg-[#FFFDF9] text-[#2B211C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">
+                    <p id="phoneError" class="hidden mt-1 text-sm !text-red-600" role="alert"></p>
+                  </div>
+                  <div class="form-field">
+                    <label for="subject">Тема звернення</label>
+                    <select id="subject" name="subject" required aria-describedby="subjectError" aria-invalid="false" class="min-h-[44px] rounded-xl border border-[#DED3C7] bg-[#FFFDF9] text-[#2B211C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">
                       <option value="" selected disabled>Оберіть тему</option>
                       <option value="order">Питання щодо замовлення</option>
                       <option value="blend">Допомога з вибором міксу</option>
                       <option value="partnership">Співпраця</option>
                     </select>
+                    <p id="subjectError" class="hidden mt-1 text-sm !text-red-600" role="alert"></p>
                   </div>
-                  <div class="form-field">
-                    <label for="contact-message">Повідомлення</label>
-                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                  <div class="form-field md:col-span-2">
+                    <label for="message">Повідомлення</label>
+                    <textarea id="message" name="message" rows="5" required aria-describedby="messageError" aria-invalid="false" class="min-h-[140px] rounded-xl border border-[#DED3C7] bg-[#FFFDF9] text-[#2B211C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]"></textarea>
+                    <p id="messageError" class="hidden mt-1 text-sm !text-red-600" role="alert"></p>
                   </div>
-                  <label class="privacy-consent">
-                    <input name="privacy-consent" type="checkbox" required>
-                    <span>Погоджуюся на обробку персональних даних для відповіді на моє звернення.</span>
-                  </label>
-                  <button class="button contact-submit" type="submit">Надіслати повідомлення</button>
+                  <div class="form-field md:col-span-2">
+                    <label class="privacy-consent" for="agreement">
+                      <input id="agreement" name="agreement" type="checkbox" required aria-describedby="agreementError" aria-invalid="false" class="min-h-[44px] rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">
+                      <span>Погоджуюся на обробку персональних даних для відповіді на моє звернення.</span>
+                    </label>
+                    <p id="agreementError" class="hidden mt-1 text-sm !text-red-600" role="alert"></p>
+                  </div>
+                  <button class="button contact-submit min-h-[44px] rounded-xl bg-[#C86445] hover:bg-[#B65338] active:bg-[#A64432] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445] md:col-span-2" type="submit">Надіслати повідомлення</button>
                 </form>
               </section>
             </div>
@@ -224,6 +237,13 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div id="successModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+      <div class="w-full max-w-md rounded-2xl border border-[#DED3C7] bg-[#FFFDF9] p-6 text-center text-[#2B211C] shadow-xl">
+        <h2 id="successModalTitle" class="mb-3 font-['Cormorant_Garamond'] text-2xl font-bold">Дякуємо! Ваше повідомлення успішно надіслано.</h2>
+        <p class="mb-6 text-[#75675D]">Форма успішно пройшла клієнтську валідацію (демонстрація без відправки на сервер).</p>
+        <button type="button" id="closeModalBtn" class="button contact-submit min-h-[44px] rounded-xl bg-[#C86445] hover:bg-[#B65338] active:bg-[#A64432] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C86445]">Закрити</button>
+      </div>
     </div>
   </body>
 </html>
