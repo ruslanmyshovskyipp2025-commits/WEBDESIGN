@@ -45,6 +45,11 @@
 
   /* Container */
   --container-max-width: 1200px;
+  --video-max-width: 960px;
+  --video-radius: var(--radius-medium);
+  --map-height: 260px;
+  --map-height-mobile: 200px;
+  --map-radius: var(--radius-medium);
 
   /* Transitions */
   --transition-default: all 0.3s ease;
@@ -2910,5 +2915,61 @@ address {
   .catalog-page .price-range input {
     width: 100%;
     min-width: 0;
+  }
+}
+
+.guide-video {
+  max-width: var(--video-max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.guide-video-player {
+  width: 100%;
+  max-width: var(--video-max-width);
+  margin: 0 auto;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--video-radius);
+  background-color: var(--color-deep-espresso);
+  box-shadow: var(--shadow-card);
+}
+
+.guide-video-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: var(--video-radius);
+}
+
+.guide-video figcaption {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.roastery-map {
+  width: 100%;
+  max-width: 100%;
+  margin: var(--space-5) 0 0;
+  overflow: hidden;
+  border-radius: var(--map-radius);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-card);
+}
+
+.roastery-map iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: var(--map-height);
+  border: 0;
+  border-radius: var(--map-radius);
+}
+
+@media (max-width: 520px) {
+  .roastery-map iframe {
+    height: var(--map-height-mobile);
   }
 }
